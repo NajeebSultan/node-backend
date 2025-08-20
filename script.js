@@ -4,4 +4,6 @@
 //   console.log("hello", i);
 // }
 
-console.log(process.argv);
+const math = require('./math');
+
+console.log(math.sum(5, 10));
