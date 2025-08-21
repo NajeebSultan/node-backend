@@ -8,6 +8,6 @@
 
 // console.log(math.sum(5, 10));
 
-const info = require("Fruits");
+const info = require("./Fruits");
 console.log(info);
 
