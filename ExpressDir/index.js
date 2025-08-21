@@ -10,21 +10,30 @@ app.get("/", (req, res) => {
   res.send("hi i am a root path");
 });
 
-app.get("/apple", (req, res) => {
-  res.send("you contacted apple path");
+app.get("/:username/:id", (req, res) => {
+  let username = req.params;
+  res.send(`Welcome to the page of @${username}`);
 });
 
-app.get("/orange", (req, res) => {
-  res.send("you contacted orange path");
-});
 
-app.get("*", (req, res) => {
-  res.send("This path does not exist");
-});
 
-app.post("/", (req, res) => {
-  res.send("You made a POST request to the root path");
-});
+
+
+// app.get("/apple", (req, res) => {
+//   res.send("you contacted apple path");
+// });
+
+// app.get("/orange", (req, res) => {
+//   res.send("you contacted orange path");
+// });
+
+// app.get("*", (req, res) => {
+//   res.send("This path does not exist");
+// });
+
+// app.post("/", (req, res) => {
+//   res.send("You made a POST request to the root path");
+// });
 
 
 // app.use((req , res) => {
