@@ -7,7 +7,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("you contacted root path");
+  res.send("hi i am a root path");
 });
 
 app.get("/apple", (req, res) => {
