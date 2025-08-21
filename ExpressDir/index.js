@@ -18,6 +18,13 @@ app.get("/orange", (req, res) => {
   res.send("you contacted orange path");
 });
 
+app.get("*", (req, res) => {
+  res.send("This path does not exist");
+});
+
+app.post("/", (req, res) => {
+  res.send("You made a POST request to the root path");
+});
 
 
 // app.use((req , res) => {
