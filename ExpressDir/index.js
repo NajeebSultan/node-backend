@@ -11,8 +11,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/:username/:id", (req, res) => {
-  let username = req.params;
-  res.send(`Welcome to the page of @${username}`);
+  let  {username , id} = req.params;
+  let htmlStr = `<h1>Welcome to the page of @${username}</h1>`;
+  res.send(htmlStr);
 });
 
 
