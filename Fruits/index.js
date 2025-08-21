@@ -4,4 +4,4 @@ const orange = require("./orange");
 
 let fruits = [apple, banana, orange];
 
-Module.exports = fruits;
+module.exports = fruits;
