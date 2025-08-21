@@ -1,4 +1,5 @@
 const express = require("express");
+const { HiH1 } = require("react-icons/hi2");
 const app = express();
 
 let port = 3000;  
@@ -16,6 +17,10 @@ app.get("/:username/:id", (req, res) => {
   res.send(htmlStr);
 });
 
+app.get("/search", (req, res) => {
+  let { q } = req.query;
+  res.send(`<h1>You searched for ${q}</h1>`);
+});
 
 
 
