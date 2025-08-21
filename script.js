@@ -4,6 +4,10 @@
 //   console.log("hello", i);
 // }
 
-const math = require('./math');
+// const math = require('./math');
 
-console.log(math.sum(5, 10));
+// console.log(math.sum(5, 10));
+
+const info = require("Fruits");
+console.log(info);
+
