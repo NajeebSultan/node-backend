@@ -8,6 +8,9 @@
 
 // console.log(math.sum(5, 10));
 
-const info = require("./Fruits");
-console.log(info);
+// const info = require("./Fruits");
+// console.log(info);
+
+
+import {sum ,PI } from "./math.js";
 
