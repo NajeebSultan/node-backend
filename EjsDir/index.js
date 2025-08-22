@@ -5,8 +5,8 @@ let port = 8080;
 
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
-  res.send('hi i am a root path');
-}); 
+  res.render("home.ejs");
+});     
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
