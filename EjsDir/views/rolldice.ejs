@@ -6,7 +6,10 @@
   <title>Roll Dice</title>
 </head>
 <body>
-  <h1>Dice gave value: <%= randomNumbe %>
+  <h1>Dice gave value: <%= randomNumber %>
   </h1>
+  <% if(randomNumber === 6){ %>
+    <h2>Nice! Roll dice again...</h2>
+  <% } %>
 </body>
 </html>
