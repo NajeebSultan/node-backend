@@ -1,5 +1,5 @@
 const express = require("express");
-const { HiH1 } = require("react-icons/hi2");
+
 const app = express();
 
 let port = 3000;  
