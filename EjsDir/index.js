@@ -4,6 +4,8 @@ const path = require("path");
 
 let port = 8080;
 
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from the public directory
+
 app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname , "/views")) ; 
 
@@ -13,14 +15,17 @@ app.get('/', (req, res) => {
 });     
 
 app.get("/ig/:username", (req, res) => {
-  const followers = ["najeeb", "sultan", "john", "doe"];
+  
+
+  const instaData = require("./data.json");
   let { username } = req.params;
-  res.render("instagram.ejs", { username , followers });
+  const data = instaData[username];
+  res.render("instagram.ejs", { data });
 });
 
 
 
-app.get("hello", (req, res) => { 
+app.get("/hello", (req, res) => { 
   res.send("hello from express");
 });
 
