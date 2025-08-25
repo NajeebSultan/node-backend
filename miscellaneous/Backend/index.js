@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 
 app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded bodies
+app.use(express.json()); // Middleware to parse JSON bodies
 
 app.get("/register", (req, res) => {
   let { user , password} = req.query;
@@ -10,7 +11,7 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-    let { user , password} = req.query;
+    let { user , password} = req.body;
   res.send(`standard POST response  Welcomm ${user}`);
 });
 
