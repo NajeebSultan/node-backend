@@ -5,11 +5,13 @@ const port = 8080;
 app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded bodies
 
 app.get("/register", (req, res) => {
-  res.send("standard GET response ");
+  let { user , password} = req.query;
+  res.send(`standard GET response . Welcomm ${user}`);
 });
 
 app.post("/register", (req, res) => {
-  res.send("standard POST response ");
+    let { user , password} = req.query;
+  res.send(`standard POST response  Welcomm ${user}`);
 });
 
 
